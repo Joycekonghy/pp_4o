@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-dark-bg text-white font-sans;
+  }
+}
+
+@layer components {
+  .task-card {
+    @apply bg-dark-card border border-dark-border rounded-lg p-4 hover:border-electric-blue/50 transition-all duration-300;
+  }
+  
+  .task-card:hover {
+    @apply shadow-lg shadow-electric-blue/20;
+  }
+  
+  .glow-button {
+    @apply bg-electric-blue/20 border border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-black transition-all duration-300;
+  }
+  
+  .sidebar-item {
+    @apply flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-dark-card transition-colors duration-200;
+  }
+  
+  .sidebar-item.active {
+    @apply bg-electric-blue/20 text-electric-blue border-l-2 border-electric-blue;
+  }
+  
+  .progress-bar {
+    @apply w-full bg-dark-border rounded-full h-2 overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-electric-blue to-neon-green transition-all duration-500;
+  }
+}
